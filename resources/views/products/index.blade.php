@@ -65,7 +65,7 @@
                         <td>₱{{number_format($item->price,2)  }}</td>
                         <td><span class="badge">{{ ucfirst($item->category->category_name ?? 'N/A') }}</span></td>
                         <td style="text-align:right">
-                            <a href="/products/{{ $item->id }}/edit" style="text-decoration: none;">🖋️Edit</a>
+                            <a href="/products/{{ $item->id }}/edit" class="btn-edit">Edit</a>
                             <form action="/products/{{ $item->id }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
